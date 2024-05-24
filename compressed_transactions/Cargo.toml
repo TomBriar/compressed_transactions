@@ -1,0 +1,15 @@
+[package]
+name = "compressed_transactions"
+version = "1.0.0"
+edition = "2021"
+repository = "https://github.com/TomBriar/compressed_transactions.git"
+description = "A crate that exposes a command-line interface for compressing bitcoin transactions, and a library that exposes a CompressedTransaction structure and its required subclasses."
+license = "BSD-3-Clause"
+
+[dependencies]
+hex = "0.4.3"
+bitcoin = "0.31.1"
+secp256k1 = { version = "0.28.2", features = ["global-context"]}
+bitcoincore-rpc = "0.18.0"
+thiserror = "1.0"
+honggfuzz = "0.5"

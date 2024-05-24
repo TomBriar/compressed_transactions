@@ -1,0 +1,17 @@
+[package]
+name = "fuzz"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+compressed_transactions = { path = "../compressed_transactions" }
+bitcoin = "0.31.1"
+thiserror = "1.0"
+honggfuzz = "0.5"
+hex = "0.4.3"
+
+[[bin]]
+name = "compressed_transactions"
+path = "fuzz_targets/compressed_transactions/fuzz.rs"
